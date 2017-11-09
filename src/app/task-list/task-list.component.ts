@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalendarComponent } from '../calendar/calendar.component';
 
 @Component({
   selector: 'app-task-list',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskListComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }
