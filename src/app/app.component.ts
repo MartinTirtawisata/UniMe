@@ -8,6 +8,7 @@ import { TaskList } from './task-list/task-list.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  signed_in = 'false';
   selectedTask: TaskList;
   title = 'app';
 
