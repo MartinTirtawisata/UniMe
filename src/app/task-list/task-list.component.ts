@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CalendarComponent } from '../calendar/calendar.component';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { TaskList } from './task-list.model';
 
 @Component({
   selector: 'app-task-list',
@@ -7,10 +7,19 @@ import { CalendarComponent } from '../calendar/calendar.component';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
+  @Output() taskWasSelected = new EventEmitter<TaskList>();
 
+  tasks: TaskList[] = [
+    new TaskList('hey',1)
+  ]
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  onAddedTask(task: TaskList){
+    this.taskWasSelected.emit(task);
+  }
+
 }
