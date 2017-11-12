@@ -9,6 +9,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { TaskEditComponent } from './task-list/task-edit/task-edit.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     TaskListComponent,
     CalendarComponent,
     TaskEditComponent,
-    SignInComponent
+    SignInComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
