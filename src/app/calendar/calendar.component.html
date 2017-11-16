@@ -1,8 +1,19 @@
 <div class="row">
-  <div class="col-md-9">
-    <div class="container">
-      <h3> Calendar </h3>
-      <p> {{ task.description }} {{ task.time}}</p>
+  <div class="container">
+    <h5> Calendar </h5>
+    <div class="card">
+      <div class="card-body">
+        <p>{{ task.description }} {{ task.time }} </p>
+        <p>{{ task.start_time }} {{ task.start_day }}</p>
+        <p>{{ task.end_time }} {{ task.end_day }} </p>
+      </div>
     </div>
-  </div>
+
+    <div class="card">
+      <div class="card-body">
+        <p>{{ staticTask.description }}</p>
+        <p>{{ staticTask.start_time }} {{ staticTask.start_day }}</p>
+        <p>{{ staticTask.end_time }} {{ staticTask.end_day }} </p>
+      </div>
+    </div>
 </div>

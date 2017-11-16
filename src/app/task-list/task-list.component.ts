@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { TaskList } from './task-list.model';
+import { staticTaskList } from './task-list.model'
 
 @Component({
   selector: 'app-task-list',
@@ -8,10 +9,19 @@ import { TaskList } from './task-list.model';
 })
 export class TaskListComponent implements OnInit {
   @Output() taskWasSelected = new EventEmitter<TaskList>();
+  @Output() staticTaskWasSelected = new EventEmitter<staticTaskList>();
+
+  loadedFeature = 'flexible';
 
   tasks: TaskList[] = [
-    new TaskList('hey',1)
+    new TaskList('1',1,'1',1,'1',1)
   ]
+
+  staticTasks: staticTaskList[] = [
+    new staticTaskList('1',1,'1',1,'1')
+  ]
+
+
 
   constructor() { }
 
@@ -21,5 +31,15 @@ export class TaskListComponent implements OnInit {
   onAddedTask(task: TaskList){
     this.taskWasSelected.emit(task);
   }
+
+  onNavigate(feature: string){
+    this.loadedFeature = feature
+  }
+
+  onStaticAddedTask(staticTask: staticTaskList){
+    this.staticTaskWasSelected.emit(staticTask);
+  }
+
+
 
 }

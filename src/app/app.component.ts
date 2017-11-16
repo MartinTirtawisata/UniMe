@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
 import { TaskList } from './task-list/task-list.model';
+import { staticTaskList } from './task-list/task-list.model';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,9 @@ import { TaskList } from './task-list/task-list.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  signed_in = 'false';
+  signed_in = 'true';
   selectedTask: TaskList;
+  selectedStaticTask: staticTaskList;
   title = 'app';
 
 }

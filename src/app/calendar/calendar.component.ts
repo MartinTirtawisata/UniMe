@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TaskList } from '../task-list/task-list.model';
+import { staticTaskList } from '../task-list/task-list.model';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { TaskList } from '../task-list/task-list.model';
 })
 export class CalendarComponent implements OnInit {
   @Input() task: TaskList;
+  @Input() staticTask: staticTaskList;
   constructor() { }
 
   ngOnInit() {
