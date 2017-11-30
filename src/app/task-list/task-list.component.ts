@@ -20,6 +20,7 @@ export class TaskListComponent implements OnInit {
   staticTasks: staticTaskList[] = [
     new staticTaskList('1',1,'1',1,'1')
   ]
+  
 
 
 
